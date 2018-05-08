@@ -22,4 +22,14 @@
 #define SIXTYFOUR_K				32768 //64*1024
 #define FOUR_K					4*1024
 
+class CLog
+{
+public:
+	CLog() {};
+	virtual ~CLog() {};
+
+	virtual void Write(BOOL fError, LPCTSTR pMsg);
+};
+
+void SetLog(CLog *pLog);
 void LogEvent(BOOL fError, LPCTSTR pFormat, ...);
